@@ -3,3 +3,27 @@
     padding: 0px;
     box-sizing: border-box;
 }
+
+.heading {
+    text-align: center;
+    margin: 20px;
+    background-color: aquamarine;
+}
+
+.guess-container {
+    width: 50%;
+    text-align: center;
+    float: left;
+    background-color: antiquewhite;
+}
+
+.match-container {
+    width: 50%;
+    text-align: center;
+    float: right;
+    background-color: aqua;
+}
+
+.game-container {
+    background-color: beige;
+}
