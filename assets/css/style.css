@@ -26,4 +26,8 @@
 
 .game-container {
     background-color: beige;
+    width: 1400px;
+    height: 800px;
+    margin: auto;
+    margin-top: 80px;
 }
