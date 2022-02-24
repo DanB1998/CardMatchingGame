@@ -38,10 +38,19 @@ function cardsMatch() {
  * This function will increment the amount of guesses a user has made in an attempt to match the cards.
  */
  function incrementGuesses() {
+
+    let guesses = parseInt(document.getElementById("guesses").innerText);
+    document.getElementById("guesses").innerText = ++guesses;
+
 }
 
 /**
  * This function will increment the amount of correct matches the user has made.
  */
  function incrementMatches() {
+
+    let matches = parseInt(document.getElementById("matches").innerText);
+    document.getElementById("matches").innerText = ++matches;
+
+
 }
