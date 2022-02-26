@@ -1,3 +1,5 @@
+/* Global code */
+
 * {
     margin: 0px;
     padding: 0px;
@@ -8,6 +10,8 @@ body {
     font-family: 'Lobster', cursive;
     letter-spacing: 3px;
 }
+
+/* Structural containers */
 
 .heading {
     text-align: center;
@@ -38,5 +42,17 @@ body {
     height: 800px;
     margin: auto;
     margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
     border: solid 1px black;
+}
+
+/* Card Styling */
+
+.card {
+    width: 25%;
+    height: 33%;
+    border: solid 1px black;
+    background-color: darkgray;
+    position: relative;
 }
