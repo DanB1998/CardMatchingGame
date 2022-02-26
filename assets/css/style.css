@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Lobster', cursive;
+    letter-spacing: 3px;
+}
+
 .heading {
     text-align: center;
     margin: 20px;
@@ -33,4 +38,5 @@
     height: 800px;
     margin: auto;
     margin-top: 80px;
+    border: solid 1px black;
 }
