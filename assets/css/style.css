@@ -53,6 +53,10 @@ body {
     width: 25%;
     height: 33%;
     border: solid 1px black;
-    background-color: darkgray;
     position: relative;
+}
+
+.card-back {
+    font-size: 100px;
+    text-align: center;
 }
