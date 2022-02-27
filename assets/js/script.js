@@ -1,7 +1,7 @@
 var cards = document.getElementsByClassName("card");
 
 for (let i = 0; i < cards.length; i++) {
-    cards[i].addEventListener("click", flipCard())
+    cards[i].addEventListener("click", flipCard)
 }
 
 /**
