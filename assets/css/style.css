@@ -60,3 +60,10 @@ body {
     text-align: center;
     margin-top: 18%;
 }
+
+.card-face {
+    font-size: 100px;
+    text-align: center;
+    margin-top: 18%;
+    display: none;
+}
