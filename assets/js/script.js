@@ -1,3 +1,9 @@
+var cards = document.getElementsByClassName("card");
+
+for (let i = 0; i < cards.length; i++) {
+    cards[i].addEventListener("click", flipCard())
+}
+
 /**
  * This function will run the game.
  */
@@ -14,6 +20,7 @@ function shuffleCards() {
  * This function will flip the cards when the click event listener is triggered on the card.
  */
 function flipCard() {
+    console.log("hi");
 }
 
 /**
