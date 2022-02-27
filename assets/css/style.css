@@ -44,7 +44,6 @@ body {
     margin-top: 80px;
     display: flex;
     flex-wrap: wrap;
-    border: solid 1px black;
 }
 
 /* Card Styling */
@@ -59,4 +58,5 @@ body {
 .card-back {
     font-size: 100px;
     text-align: center;
+    margin-top: 18%;
 }
