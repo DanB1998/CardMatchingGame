@@ -20,7 +20,7 @@ function shuffleCards() {
  * This function will flip the cards when the click event listener is triggered on the card.
  */
 function flipCard() {
-    console.log("hi");
+    this.classList.toggle('flip');
 }
 
 /**
