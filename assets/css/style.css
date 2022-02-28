@@ -24,7 +24,7 @@ body {
     width: 50%;
     text-align: center;
     float: left;
-    font-size: 25px;
+    font-size: 35px;
     background-color: antiquewhite;
 }
 
@@ -32,7 +32,7 @@ body {
     width: 50%;
     text-align: center;
     float: right;
-    font-size: 25px;
+    font-size: 35px;
     background-color: aqua;
 }
 
@@ -59,6 +59,7 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
+    display: none;
 }
 
 .card-face {
@@ -66,5 +67,4 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    display: none;
 }
