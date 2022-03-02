@@ -1,4 +1,5 @@
 var cards = document.getElementsByClassName("card");
+let secondCard = false;
 
 for (let i = 0; i < cards.length; i++) {
     cards[i].addEventListener("click", flipCard)
@@ -21,12 +22,24 @@ function shuffleCards() {
  */
 function flipCard() {
     this.classList.toggle('flip');
+    if (secondCard == false) {
+        alert("This is the first card!");
+        secondCard = true;
+    } else {
+        alert("This will be checked for a match");
+        secondCard = false;
+    }
 }
 
 /**
  * This function will check the cards match. If they do it will trigger the cards match function. If not it will trigger the non-match function.
  */
 function checkCards() {
+    if (secondCard = false) {
+        alert("This is the first card!");
+    } else {
+        secondCard 
+    }
 }
 
 /**
