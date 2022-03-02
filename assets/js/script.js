@@ -27,6 +27,7 @@ function flipCard() {
         secondCard = true;
     } else {
         alert("This will be checked for a match");
+        incrementGuesses();
         secondCard = false;
     }
 }
