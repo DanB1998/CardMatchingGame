@@ -36,11 +36,6 @@ function flipCard() {
  * This function will check the cards match. If they do it will trigger the cards match function. If not it will trigger the non-match function.
  */
 function checkCards() {
-    if (secondCard = false) {
-        alert("This is the first card!");
-    } else {
-        secondCard 
-    }
 }
 
 /**
