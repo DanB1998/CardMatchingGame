@@ -25,10 +25,14 @@ function flipCard() {
     if (secondCard == false) {
         alert("This is the first card!");
         secondCard = true;
+        card1 = this;
     } else {
         alert("This will be checked for a match");
         incrementGuesses();
         secondCard = false;
+        card2 = this;
+        console.log(card1);
+        console.log(card2);
     }
 }
 
