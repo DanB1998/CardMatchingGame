@@ -33,6 +33,7 @@ function flipCard() {
         card2 = this;
         console.log(card1);
         console.log(card2);
+        checkCards();
     }
 }
 
@@ -40,12 +41,18 @@ function flipCard() {
  * This function will check the cards match. If they do it will trigger the cards match function. If not it will trigger the non-match function.
  */
 function checkCards() {
+    if (card1 = card2) {
+        cardsMatch();
+    } else {
+        nonMatch()
+    }
 }
 
 /**
  * This function will trigger a match. Keeping the cards flipped over and incrementing a match in the score and also incrementing the guesses.
  */
 function cardsMatch() {
+    incrementMatches();
 }
 
 /**
