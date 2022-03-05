@@ -71,6 +71,8 @@ body {
     transform: rotateY(180deg);
 }
 
+/* Flipped card css */
+
 .card.flip {
     transform: rotateY(180deg);
 }
