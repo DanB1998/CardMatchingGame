@@ -52,17 +52,26 @@ function checkCards() {
  * This function will trigger a match. Keeping the cards flipped over and incrementing a match in the score and also incrementing the guesses.
  */
 function cardsMatch() {
+    
     incrementMatches();
+
     card1.removeEventListener("click", flipCard);
     card2.removeEventListener("click", flipCard);
+
+    if (matches.innerText == 6) {
+        setTimeout(youWin, 1500);
+    }
+
 }
 
 /**
  * This function will trigger a non-match. Flipping the cards back over and incrementing the guesses score.
  */
  function nonMatch() {
+    
     card1.classList.remove('flip');
     card2.classList.remove('flip');
+
 }
 
 /**
@@ -84,4 +93,8 @@ function cardsMatch() {
     document.getElementById("matches").innerText = ++matches;
 
 
+}
+
+function youWin() {
+    alert("YouWin!");
 }
