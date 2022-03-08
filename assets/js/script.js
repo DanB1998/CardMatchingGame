@@ -25,14 +25,14 @@ function flipCard() {
     if (secondCard == false) {
         alert("This is the first card!");
         secondCard = true;
-        card1 = this.querySelector("img").src;
+        card1 = this;
+        card1img = this.querySelector("img").src;
     } else {
         alert("This will be checked for a match");
         incrementGuesses();
         secondCard = false;
-        card2 = this.querySelector("img").src;
-        console.log(card1);
-        console.log(card2);
+        card2 = this;
+        card2img = this.querySelector("img").src;
         checkCards();
     }
 }
@@ -41,10 +41,10 @@ function flipCard() {
  * This function will check the cards match. If they do it will trigger the cards match function. If not it will trigger the non-match function.
  */
 function checkCards() {
-    if (card1 === card2) {
+    if (card1img === card2img) {
         cardsMatch();
     } else {
-        nonMatch()
+        setTimeout(nonMatch, 1500);
     }
 }
 
@@ -59,6 +59,8 @@ function cardsMatch() {
  * This function will trigger a non-match. Flipping the cards back over and incrementing the guesses score.
  */
  function nonMatch() {
+    card1.classList.remove('flip');
+    card2.classList.remove('flip');
 }
 
 /**
