@@ -53,6 +53,8 @@ function checkCards() {
  */
 function cardsMatch() {
     incrementMatches();
+    card1.removeEventListener("click", flipCard);
+    card2.removeEventListener("click", flipCard);
 }
 
 /**
