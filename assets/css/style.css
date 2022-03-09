@@ -9,7 +9,8 @@
 body {
     font-family: 'Lobster', cursive;
     letter-spacing: 3px;
-    color: orange;
+    color: black;
+    background: radial-gradient(rgb(224, 146, 0), wheat);
 }
 
 /* Structural containers */
@@ -17,7 +18,13 @@ body {
 .heading {
     text-align: center;
     margin: 20px;
-    font-size: 40px;
+    font-size: 32px;
+}
+
+.fa-tractor {
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 70px;
 }
 
 .guess-container {
@@ -46,12 +53,13 @@ body {
 /* Card Styling */
 
 .card {
-    width: 25%;
-    height: 33%;
+    width: calc(25% - 14px);
+    height: calc(33.33% - 14px);
     border: solid 1px black;
     position: relative;
     transform-style: preserve-3d;
     transition: all 0.5s ease;
+    margin: 7px;
 }
 
 .card-back {
