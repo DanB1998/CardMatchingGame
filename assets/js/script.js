@@ -5,6 +5,8 @@ for (let i = 0; i < cards.length; i++) {
     cards[i].addEventListener("click", flipCard)
 }
 
+shuffleCards();
+
 /**
  * This function will run the game.
  */
@@ -15,6 +17,10 @@ function runGame() {
  * This function will shuffle the cards. Using shuffle array and then iterating the array through the cards.
  */
 function shuffleCards() {
+    for (let i = 0; i < cards.length; i++) {
+        shuffle = Math.floor(Math.random() * 12);
+        cards[i].style.order = shuffle;
+    }
 }
 
 /**
@@ -96,5 +102,5 @@ function cardsMatch() {
 }
 
 function youWin() {
-    alert("YouWin!");
+    alert("You Win!");
 }
