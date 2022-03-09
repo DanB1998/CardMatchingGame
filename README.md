@@ -14,6 +14,8 @@ The purpose of this game is to be fun and easy to play, mainly targeting younger
 
 ## Features
 
+## Overlays
+
 ### Starting Overlay
 
 (screenshot of starting overlay when complete)
