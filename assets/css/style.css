@@ -89,15 +89,20 @@ body {
 @media only screen and (max-width: 1250px){
     
     .heading {
-        font-size: 24px;
+        font-size: 18px;
     }
 
     .guess-container {
-        font-size: 20px;
+        font-size: 30px;
     }
     
     .match-container {
-        font-size: 20px;
+        font-size: 30px;
+    }
+
+    .fa-tractor {
+        font-size: 40px;
+        margin: 0px;
     }
 
     .card {
@@ -107,10 +112,10 @@ body {
 
 }
 
-@media only screen and (max-width: 850px){
+@media only screen and (max-width: 550px){
     
     .heading {
-        font-size: 10px;
+        font-size: 7px;
     }
 
     .guess-container {
@@ -121,6 +126,10 @@ body {
         font-size: 15px;
     }
 
+    .fa-tractor {
+        font-size: 18px;
+        margin: 0px;
+    }
 
     .card {
         width: calc(50% - 14px);
