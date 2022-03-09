@@ -132,20 +132,19 @@ body {
 @media only screen and (max-width: 550px){
     
     .heading {
-        font-size: 9px;
+        font-size: 8px;
     }
 
     .guess-container {
-        font-size: 22px;
+        font-size: 13px;
     }
     
     .match-container {
-        font-size: 22px;
+        font-size: 13px;
     }
 
     .fa-tractor {
-        font-size: 18px;
-        margin: 0px;
+        font-size: 14px;
     }
 
     .card {
