@@ -11,6 +11,7 @@ body {
     letter-spacing: 3px;
     color: black;
     background: radial-gradient(rgb(224, 146, 0), wheat);
+    width: 100vw;
 }
 
 /* Structural containers */
@@ -42,8 +43,8 @@ body {
 }
 
 .game-container {
-    width: 1400px;
-    height: 800px;
+    width: 85vw;
+    height: 75vh;
     margin: auto;
     margin-top: 80px;
     display: flex;
@@ -83,4 +84,47 @@ body {
 
 .card.flip {
     transform: rotateY(180deg);
+}
+
+@media only screen and (max-width: 1250px){
+    
+    .heading {
+        font-size: 24px;
+    }
+
+    .guess-container {
+        font-size: 20px;
+    }
+    
+    .match-container {
+        font-size: 20px;
+    }
+
+    .card {
+        width: calc(33.33% - 14px);
+        height: calc(25% - 14px);
+    }
+
+}
+
+@media only screen and (max-width: 850px){
+    
+    .heading {
+        font-size: 10px;
+    }
+
+    .guess-container {
+        font-size: 15px;
+    }
+    
+    .match-container {
+        font-size: 15px;
+    }
+
+
+    .card {
+        width: calc(50% - 14px);
+        height: calc(16.66% - 14px);
+    }
+
 }
