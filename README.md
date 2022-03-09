@@ -8,4 +8,26 @@ The aim of this project is to showcase understanding of many aspects of javascri
 
 I also wish to make the development process clean and easy to follow to allow anyone to take a look at the project and understand the process and the different stages that the project took.
 
+## User Stories
+
+The purpose of this game is to be fun and easy to play, mainly targeting younger audiences however still playable by all ages. It is simple and easy to use requiring only clicks to begin and play the game. The instructions are clear and make the process of playing the game as fluid as possible.
+
 ## Features
+
+### Starting Overlay
+
+(screenshot of starting overlay when complete)
+
+The starting overlay is what the user will land on after entering the game. This will give a brief introduction to the game and explain how it is played, with the option of also selecting a difficulty level.
+
+### Winner Overlay
+
+(screenshot of winner overlay when complete)
+
+The winner overlay will display when the user wins the game (matching 6 pairs of cards). This will pop up and allow the user to easily restart the game. This will return them to the landing overlay so they can choose a new difficulty, or allow them to restart on the same difficulty as they just played, skipping the need for the starting overlay to reappear.
+
+### Loser Overlay
+
+(screenshot of winner overlay when complete)
+
+This overlay will appear when the player runs out of time. This will pop up and, similarly to the winner overlay, allow the user to 'try again' on the same difficulty or restart and choose a new difficulty (prompting the starting overlay to appear again). 
