@@ -32,13 +32,14 @@ function flipCard() {
 
     if (gameBusy) return;
 
-    this.classList.toggle('flip');
+    this.classList.add('flip');
     if (secondCard == false) {
         alert("This is the first card!");
         secondCard = true;
         card1 = this;
         card1img = this.querySelector("img").src;
     } else {
+        if (this === card1) return;
         alert("This will be checked for a match");
         incrementGuesses();
         secondCard = false;
