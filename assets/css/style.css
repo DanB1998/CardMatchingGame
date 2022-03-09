@@ -93,16 +93,21 @@ body {
     }
 
     .guess-container {
-        font-size: 30px;
+        font-size: 23px;
     }
     
     .match-container {
-        font-size: 30px;
+        font-size: 23px;
     }
 
     .fa-tractor {
         font-size: 40px;
         margin: 0px;
+    }
+
+    .game-container {
+        width: 95vw;
+        height: 85vh;
     }
 
     .card {
@@ -112,18 +117,30 @@ body {
 
 }
 
+@media only screen and (max-width: 750px){
+    
+    .heading {
+        font-size: 13px;
+    }
+
+    .fa-tractor {
+        font-size: 28px;
+    }
+
+}
+
 @media only screen and (max-width: 550px){
     
     .heading {
-        font-size: 7px;
+        font-size: 9px;
     }
 
     .guess-container {
-        font-size: 15px;
+        font-size: 22px;
     }
     
     .match-container {
-        font-size: 15px;
+        font-size: 22px;
     }
 
     .fa-tractor {
