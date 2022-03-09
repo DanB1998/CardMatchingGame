@@ -1,5 +1,7 @@
 var cards = document.getElementsByClassName("card");
+
 let secondCard = false;
+let gameBusy = false;
 
 for (let i = 0; i < cards.length; i++) {
     cards[i].addEventListener("click", flipCard)
@@ -27,6 +29,9 @@ function shuffleCards() {
  * This function will flip the cards when the click event listener is triggered on the card.
  */
 function flipCard() {
+
+    if (gameBusy) return;
+
     this.classList.toggle('flip');
     if (secondCard == false) {
         alert("This is the first card!");
@@ -47,6 +52,9 @@ function flipCard() {
  * This function will check the cards match. If they do it will trigger the cards match function. If not it will trigger the non-match function.
  */
 function checkCards() {
+
+    gameBusy = true;
+
     if (card1img === card2img) {
         cardsMatch();
     } else {
@@ -64,8 +72,10 @@ function cardsMatch() {
     card1.removeEventListener("click", flipCard);
     card2.removeEventListener("click", flipCard);
 
+    gameBusy = false;
+
     if (matches.innerText == 6) {
-        setTimeout(youWin, 1500);
+        setTimeout(youWin, 1250);
     }
 
 }
@@ -77,6 +87,8 @@ function cardsMatch() {
     
     card1.classList.remove('flip');
     card2.classList.remove('flip');
+
+    setTimeout(gameBusy = false, 500);
 
 }
 
