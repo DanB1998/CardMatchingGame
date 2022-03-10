@@ -78,4 +78,17 @@ Used as a workspace and hosting platform.
 
 To host and store my project remotely, and also to deploy the website.
 
+## Deployment
+
+This project was deployed on github pages. I used gitpod as my developer environment and committed often at most implementations to ensure good version control. Git push allowed me to save changes to github. This allowed me to revert to any olds changes I had in case something didn't work out as I planned whilst making the game.
+
+How I deployed my project on github pages:
+
+1. Navigate to settings on desired repository.
+2. Scroll down to the github pages section.
+3. Select the main branch.
+4. Save and github pages will deploy the site. 
+
+You can also run the repository locally.
+
 
