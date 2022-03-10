@@ -46,6 +46,22 @@ There are 12 cards and they are each positioned inside the game container. Each 
 
 ## Technologies used
 
+# Testing 
+
+## Validator Testing
+
+HTML
+
+* I used W3 as my html validator and there were no errors when it was passed through by direct input. https://validator.w3.org/
+
+CSS
+
+* There were also no errors when running the code through the CSS validator at https://jigsaw.w3.org/
+
+Javascript
+
+*  Lastly there were no errors when running the code through the Javascript validator at https://beautifytools.com/javascript-validator.php
+
 #### HTML5 
 
  As the main language for structure.
@@ -90,5 +106,9 @@ How I deployed my project on github pages:
 4. Save and github pages will deploy the site. 
 
 You can also run the repository locally.
+
+## Images 
+
+All images were downloaded on [Shutterstock](https://www.shutterstock.com/) with a licence.
 
 
