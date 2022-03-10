@@ -44,4 +44,38 @@ There are 12 cards and they are each positioned inside the game container. Each 
 
 ### Difficulty levels
 
+## Technologies used
+
+#### HTML5 
+
+ As the main language for structure.
+
+#### CSS
+
+For styling my html and animating the flipping of the cards.
+
+#### Javascript
+
+Used for creating the game logic and making the game interactive. Javascript is the main program behind what makes the game interactive and playable.
+
+#### Google Fonts
+
+To select my main font that is fun, matching the theme of the game.
+
+#### Fontawesome
+
+Fontawesome was used for the tractor icons in the header.
+
+#### Git
+
+Used for version control to allow me to keep me work safe and up to date.
+
+#### Gitpod
+
+Used as a workspace and hosting platform.
+
+#### Github
+
+To host and store my project remotely, and also to deploy the website.
+
 
