@@ -246,17 +246,18 @@ body {
     }
 
     .overlay {
-        font-size: 50px;
+        font-size: 45px;
     }
 
     .overlay .desc {
-        font-size: 22px;
+        font-size: 19px;
     }
 
     .overlay button {
         font-size: 15px;
         width: 150px;
         height: 45px;
+        margin: 20px;
     }
 
 }
