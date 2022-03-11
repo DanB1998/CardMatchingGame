@@ -32,7 +32,7 @@ function hard() {
 function runGame() {
 
     let timer = document.getElementById('timer');
-    let timeleft = 0;
+    let timeleft = 100;
 
     for (let i = 0; i < cards.length; i++) {
         cards[i].addEventListener("click", flipCard)
@@ -72,13 +72,11 @@ function flipCard() {
     this.classList.add('flip');
 
     if (secondCard == false) {
-        alert("This is the first card!");
         secondCard = true;
         card1 = this;
         card1img = this.querySelector("img").src;
     } else {
         if (this === card1) return;
-        alert("This will be checked for a match");
         secondCard = false;
         card2 = this;
         card2img = this.querySelector("img").src;
