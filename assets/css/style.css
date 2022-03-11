@@ -207,6 +207,14 @@ body {
         padding: 10px
     }
 
+    .time-container {
+        font-size: 20px;
+    }
+    
+    .match-container {
+        font-size: 20px;
+    }
+
 }
 
 @media only screen and (max-width: 650px){
