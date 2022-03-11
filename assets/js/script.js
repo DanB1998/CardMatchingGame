@@ -3,6 +3,9 @@ var cards = document.getElementsByClassName("card");
 let secondCard = false;
 let gameBusy = false;
 
+let timer = document.getElementById('timer');
+let timeleft = 60;
+
 for (let i = 0; i < cards.length; i++) {
     cards[i].addEventListener("click", flipCard)
 }
@@ -15,6 +18,16 @@ shuffleCards();
 function runGame() {
 }
 
+function gameClock() {
+
+    setInterval(countdown, 1000);
+
+    function countdown() {
+        timeleft--;
+        timer.innerHTML = timeleft;
+    }
+}
+
 /**
  * This function will shuffle the cards. Using shuffle array and then iterating the array through the cards.
  */
@@ -23,6 +36,7 @@ function shuffleCards() {
         shuffle = Math.floor(Math.random() * 12);
         cards[i].style.order = shuffle;
     }
+    gameClock();
 }
 
 /**
@@ -33,6 +47,7 @@ function flipCard() {
     if (gameBusy) return;
 
     this.classList.add('flip');
+
     if (secondCard == false) {
         alert("This is the first card!");
         secondCard = true;
@@ -41,7 +56,6 @@ function flipCard() {
     } else {
         if (this === card1) return;
         alert("This will be checked for a match");
-        incrementGuesses();
         secondCard = false;
         card2 = this;
         card2img = this.querySelector("img").src;
@@ -90,16 +104,6 @@ function cardsMatch() {
     card2.classList.remove('flip');
 
     setTimeout(gameBusy = false, 500);
-
-}
-
-/**
- * This function will increment the amount of guesses a user has made in an attempt to match the cards.
- */
- function incrementGuesses() {
-
-    let guesses = parseInt(document.getElementById("guesses").innerText);
-    document.getElementById("guesses").innerText = ++guesses;
 
 }
 
