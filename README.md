@@ -38,11 +38,9 @@ This overlay will appear when the player runs out of time. This will pop up and,
 
 There are 12 cards and they are each positioned inside the game container. Each card is a percentage width and height of the game container (minus the margin), which allows the cards to resize themselves inside the game container based on which device the game is being played on. The cards will flip when clicked as the Javascript will give them a class called '.flip'. Once this class is handed to the card the CSS will flip the card and the card and its image will also be stored for use in the javascript logic later on.
 
-### Matches and Timer
+### Matches and Timer (including difficulty)
 
 ### Matching logic
-
-### Difficulty levels
 
 ## Technologies used
 
