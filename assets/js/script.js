@@ -1,5 +1,7 @@
 var cards = document.getElementsByClassName("card");
+
 var startOverlay = document.getElementById('start');
+var winOverlay = document.getElementById('win');
 
 let secondCard = false;
 let gameBusy = false;
@@ -7,21 +9,21 @@ let gameBusy = false;
 function easy() {
     runGame();
     startOverlay.classList.remove('show');
-    timeleft = 80;
+    timeleft = 70;
     gameClock();
 }
 
 function medium() {
     runGame();
     startOverlay.classList.remove('show');
-    timeleft = 60;
+    timeleft = 50;
     gameClock();
 }
 
 function hard() {
     runGame();
     startOverlay.classList.remove('show');
-    timeleft = 40;
+    timeleft = 35;
     gameClock();
 }
 
@@ -32,7 +34,7 @@ function hard() {
 function runGame() {
 
     let timer = document.getElementById('timer');
-    let timeleft = 100;
+    let timeleft;
 
     for (let i = 0; i < cards.length; i++) {
         cards[i].addEventListener("click", flipCard)
@@ -44,12 +46,17 @@ function runGame() {
 
 function gameClock() {
 
-    setInterval(countdown, 1000);
+    myTimer = setInterval(countdown, 1000);
 
     function countdown() {
         timeleft--;
         timer.innerHTML = timeleft;
+
+        if (timeleft < 0) {
+            youLose();
+        }
     }
+
 }
 
 /**
@@ -140,5 +147,11 @@ function incrementMatches() {
 }
 
 function youWin() {
-    alert("You Win!");
+    clearInterval(myTimer);
+    winOverlay.classList.add('show');
+}
+
+function youLose() {
+    alert('You lose');
+    clearInterval(myTimer);
 }

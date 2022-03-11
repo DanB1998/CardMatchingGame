@@ -15,13 +15,21 @@
 <!-- Titles -->
 
 <body>
-    <div id='start' class="start-overlay show">
+    <div id='start' class="start-overlay show overlay">
 
         <p> Click to Play. <br>
-            <span id="instructions"> Find all 6 pairs of animals to win the game! <br> Please choose a difficulty level, the harder you choose, the less time you will have to match the cards!</span>
+            <span class="desc"> Find all 6 pairs of animals to win the game! <br> Please choose a difficulty level, the harder you choose, the less time you will have to match the cards!</span>
             <br><button onclick="easy()" id="easy">EASY</button>
             <br><button onclick="medium()" id="medium">MEDIUM</button>
             <br><button onclick="hard()" id="hard">HARD</button>
+        </p>
+    </div>
+
+    <div id='win' class="win-overlay overlay">
+
+        <p> You Win! <br>
+            <span class="desc"> You found all of the animals before the time ran out, Congratulations!<br></span>
+            <br><button onclick="easy()" id="easy">Play Again!</button>
         </p>
     </div>
 

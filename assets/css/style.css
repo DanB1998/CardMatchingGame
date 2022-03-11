@@ -13,9 +13,9 @@ body {
     background: radial-gradient(rgb(224, 146, 0), wheat);
 }
 
-/* Start overlay */
+/* Overlay Styling*/
 
-.start-overlay {
+.overlay {
     display: none;
     color: orange;
     font-size: 70px;
@@ -31,12 +31,12 @@ body {
     text-align: center;
 }
 
-.start-overlay #instructions {
-    font-size: 25px;
+.overlay .desc {
+    font-size: 30px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.start-overlay button {
+.overlay button {
     width: 250px;
     height: 60px;
     margin: 25px;
@@ -46,7 +46,15 @@ body {
     font-size: 20px;
 }
 
+/* Show start overlay with 'show' class */
+
 .start-overlay.show {
+    display: flex;
+}
+
+/* Show win overlay with 'show' class */
+
+.win-overlay.show {
     display: flex;
 }
 
