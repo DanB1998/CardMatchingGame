@@ -46,6 +46,20 @@ body {
     font-size: 20px;
 }
 
+/* Overlay animation */
+
+.overlay.show {
+    animation: overlay-appear 750ms forwards;
+}
+
+.overlay .desc {
+    animation: overlay-appear 750ms forwards;
+}
+
+.overlay button {
+    animation: overlay-appear 750ms forwards;
+}
+
 /* Show start overlay with 'show' class */
 
 .start-overlay.show {
@@ -55,6 +69,12 @@ body {
 /* Show win overlay with 'show' class */
 
 .win-overlay.show {
+    display: flex;
+}
+
+/* Show lose overlay with 'show' class */
+
+.lose-overlay.show {
     display: flex;
 }
 
@@ -129,6 +149,16 @@ body {
 .card.flip {
     transform: rotateY(180deg);
 }
+
+/* Overlay animation when appearing */
+
+@keyframes overlay-appear {
+    from {
+        font-size: 0.5em;
+    }
+}
+
+/* Media Queries for resposivitiy */
 
 @media only screen and (max-width: 1250px){
     

@@ -2,9 +2,12 @@ const cards = document.getElementsByClassName("card");
 
 var startOverlay = document.getElementById('start');
 var winOverlay = document.getElementById('win');
+var loseOverlay = document.getElementById('lose');
 
 let secondCard = false;
 let gameBusy = false;
+
+let timeleft;
 
 function easy() {
     runGame();
@@ -23,7 +26,7 @@ function medium() {
 function hard() {
     runGame();
     startOverlay.classList.remove('show');
-    timeleft = 35;
+    timeleft = 5;
     gameClock();
 }
 
@@ -152,11 +155,12 @@ function youWin() {
 }
 
 function youLose() {
-    alert('You lose');
     clearInterval(myTimer);
+    loseOverlay.classList.add('show');
 }
 
 function playAgain () {
+    loseOverlay.classList.remove('show');
     winOverlay.classList.remove('show');
     startOverlay.classList.add('show');
     
