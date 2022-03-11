@@ -1,4 +1,4 @@
-var cards = document.getElementsByClassName("card");
+const cards = document.getElementsByClassName("card");
 
 var startOverlay = document.getElementById('start');
 var winOverlay = document.getElementById('win');
@@ -154,4 +154,15 @@ function youWin() {
 function youLose() {
     alert('You lose');
     clearInterval(myTimer);
+}
+
+function playAgain () {
+    winOverlay.classList.remove('show');
+    startOverlay.classList.add('show');
+    
+    for (let i = 0; i < cards.length; i++) {
+        cards[i].classList.remove('flip');
+    }
+
+    matches.innerText = 0;
 }
