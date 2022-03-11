@@ -9,6 +9,9 @@ let gameBusy = false;
 
 let timeleft;
 
+/**
+* Difficulty selectors.
+*/
 function easy() {
     runGame();
     startOverlay.classList.remove('show');
@@ -31,9 +34,8 @@ function hard() {
 }
 
 /**
- * This function will begin the game.
- */
-
+* This function will begin the game.
+*/
 function runGame() {
 
     let timer = document.getElementById('timer');
@@ -47,6 +49,9 @@ function runGame() {
 
 }
 
+/**
+* Game clock function, allows the timer to countdown.
+*/
 function gameClock() {
 
     myTimer = setInterval(countdown, 1000);
@@ -63,8 +68,8 @@ function gameClock() {
 }
 
 /**
- * This function will shuffle the cards. Using shuffle array and then iterating the array through the cards.
- */
+* This function will shuffle the cards. Using shuffle array and then iterating the array through the cards.
+*/
 function shuffleCards() {
     for (let i = 0; i < cards.length; i++) {
         shuffle = Math.floor(Math.random() * 12);
@@ -73,8 +78,8 @@ function shuffleCards() {
 }
 
 /**
- * This function will flip the cards when the click event listener is triggered on the card.
- */
+* This function will flip the cards when the click event listener is triggered on the card.
+*/
 function flipCard() {
 
     if (gameBusy) return;
@@ -95,8 +100,8 @@ function flipCard() {
 }
 
 /**
- * This function will check the cards match. If they do it will trigger the cards match function. If not it will trigger the non-match function.
- */
+* This function will check the cards match. If they do it will trigger the cards match function. If not it will trigger the non-match function.
+*/
 function checkCards() {
 
     gameBusy = true;
@@ -109,8 +114,8 @@ function checkCards() {
 }
 
 /**
- * This function will trigger a match. Keeping the cards flipped over and incrementing a match in the score and also incrementing the guesses.
- */
+* This function will trigger a match. Keeping the cards flipped over and incrementing a match in the score and also incrementing the guesses.
+*/
 function cardsMatch() {
 
     incrementMatches();
@@ -127,8 +132,8 @@ function cardsMatch() {
 }
 
 /**
- * This function will trigger a non-match. Flipping the cards back over and incrementing the guesses score.
- */
+* This function will trigger a non-match. Flipping the cards back over and incrementing the guesses score.
+*/
 function nonMatch() {
 
     card1.classList.remove('flip');
@@ -139,8 +144,8 @@ function nonMatch() {
 }
 
 /**
- * This function will increment the amount of correct matches the user has made.
- */
+* This function will increment the amount of correct matches the user has made.
+*/
 function incrementMatches() {
 
     let matches = parseInt(document.getElementById("matches").innerText);
@@ -149,16 +154,25 @@ function incrementMatches() {
 
 }
 
+/**
+* You win function will bring up the win overlay and stop the clock.
+*/
 function youWin() {
     clearInterval(myTimer);
     winOverlay.classList.add('show');
 }
 
+/**
+* You lose function will bring up the lose overlay and offer a restart.
+*/
 function youLose() {
     clearInterval(myTimer);
     loseOverlay.classList.add('show');
 }
 
+/**
+* Play again function will unflip all the cards, reset the timer and bring up the starting overlay again.
+*/
 function playAgain () {
     loseOverlay.classList.remove('show');
     winOverlay.classList.remove('show');
