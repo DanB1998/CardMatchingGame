@@ -1,21 +1,45 @@
 var cards = document.getElementsByClassName("card");
+var startOverlay = document.getElementById('start');
 
 let secondCard = false;
 let gameBusy = false;
 
-let timer = document.getElementById('timer');
-let timeleft = 60;
-
-for (let i = 0; i < cards.length; i++) {
-    cards[i].addEventListener("click", flipCard)
+function easy() {
+    runGame();
+    startOverlay.classList.remove('show');
+    timeleft = 80;
+    gameClock();
 }
 
-shuffleCards();
+function medium() {
+    runGame();
+    startOverlay.classList.remove('show');
+    timeleft = 60;
+    gameClock();
+}
+
+function hard() {
+    runGame();
+    startOverlay.classList.remove('show');
+    timeleft = 40;
+    gameClock();
+}
 
 /**
- * This function will run the game.
+ * This function will begin the game.
  */
+
 function runGame() {
+
+    let timer = document.getElementById('timer');
+    let timeleft = 0;
+
+    for (let i = 0; i < cards.length; i++) {
+        cards[i].addEventListener("click", flipCard)
+    }
+
+    shuffleCards();
+
 }
 
 function gameClock() {
@@ -36,7 +60,6 @@ function shuffleCards() {
         shuffle = Math.floor(Math.random() * 12);
         cards[i].style.order = shuffle;
     }
-    gameClock();
 }
 
 /**
@@ -81,7 +104,7 @@ function checkCards() {
  * This function will trigger a match. Keeping the cards flipped over and incrementing a match in the score and also incrementing the guesses.
  */
 function cardsMatch() {
-    
+
     incrementMatches();
 
     card1.removeEventListener("click", flipCard);
@@ -98,8 +121,8 @@ function cardsMatch() {
 /**
  * This function will trigger a non-match. Flipping the cards back over and incrementing the guesses score.
  */
- function nonMatch() {
-    
+function nonMatch() {
+
     card1.classList.remove('flip');
     card2.classList.remove('flip');
 
@@ -110,7 +133,7 @@ function cardsMatch() {
 /**
  * This function will increment the amount of correct matches the user has made.
  */
- function incrementMatches() {
+function incrementMatches() {
 
     let matches = parseInt(document.getElementById("matches").innerText);
     document.getElementById("matches").innerText = ++matches;
