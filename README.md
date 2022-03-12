@@ -14,6 +14,10 @@ I also wish to make the development process clean and easy to follow to allow an
 
 The purpose of this game is to be fun and easy to play, mainly targeting younger audiences however still playable by all ages. It is simple and easy to use requiring only clicks to begin and play the game. The instructions are clear and make the process of playing the game as fluid as possible.
 
+The game is also designed to be easy to use, which means parents can allow their children to play and not have to worry about repeatedly managing them on the game they are busy. This ease of use does not take away the fun of it being played together, as the pictures and animations are smooth and fun.
+
+As the developer I wanted to make it as fun and as interesting as possible whilst leaving it scalable and easy to navigate. This mean I, or anyone else, can pick it up and make it more complex or improve it at any point without having to dive into spaghetti code.
+
 # Features
 
 ## Overlays:
@@ -64,14 +68,33 @@ Once both the first and second clicked cards' images have been captured the 'che
 
 If it is a match the 'cardsMatch()' function will be triggered, and if not the 'nonMatch()' function will be triggered.
 
+## Styling and Colours
+
+The main colours used in this game were orange and black. These colours stand out against one another making the game clear and easy to follow, which caters for its audience of younger children as they won't be confused/struggling to follow anything. Also large, neat font is used to be readable and clear, and buttons and interactive parts of the project are large and simple meaning they are not confusing. This reinforces the design to be best accessible to its target audience.
 
 # Testing 
+
+### Trying to be game-breaking
+
+The first thing when testing a game, for me anyway, is to see if you can find a way to break it. I came across a couple of scenarios which were more tricky to make robust whilst making this project and they were:
+
+1. When the user spam clicks multiple cards in a short period of time.
+* This was an issue as the game would flip over multiple cards at once and the flipCard() function which controlled the first and second card logic, would completely collapse.
+
+2. When a user spam clicks the same card multiple times.
+* This was an issue as the card would recognise itself as the same card as was clicked first, so it would match itself and trigger the game to think the user had matched 2 cards.
+
+I found that the best way to solve the 'spam clicking multiple cards in a short period of time' was to introduce a new variable 'gameBusy'. If 'gameBusy' was true it would break out the flipCard function, meaning the spam clicks would just be ignored by the flipCard() function. gameBusy would then be set back to false after the game had finished checking if the second card was a match or a non-match with the help also from the setInterval() function, which gave the cards 500ms of time to flip back over before setting gameBusy to false again. After attempting to spam click many times (and even giving this program to family members and asking them to try and break it!), I was unable to get this issue to arise again.
+
+The second issue of clicking the same card multiple times was much easier to solve. Whilst this issue was in my game the flipCard() function was toggling the classlist 'flip', meaning every card that was clicked would have flip added or removed depending on if it had it or not. I changed this from 'toggle' to 'add' and told the flipCard() function to break out if card 1 was the same as card 2, meaning that it was not possible to click the same card twice and the game to break.
+
+After these 2 issues were solved, the game-breaking attempts were still continuing. And after many tries me,  nor any of my helpers could not make the game fail so I would say it is fairly robust. Although I don't doubt there are clever ways to break it, my extensive testing showed me the game is playable nearly 100% of the time with next to no issues. 
 
 ### Responsivity testing
 
 I tested this project thoroughly on all devices using chrome developer tools' 'responsivity' feature. I found no issues and used this to tweak aspects of my media queries to make the game better perform on smaller devices.
 
-I also tried the game myself on my phone, laptop and PC and the game ran very well, I have included some screenshots of this testing below.
+I also tried the game myself on my personal phone, laptop and PC and the game ran very well, I have included some screenshots of this testing from these devices below.
 
 ### Lighthouse
 
