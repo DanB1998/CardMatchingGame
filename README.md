@@ -77,6 +77,10 @@ I also tried the game myself on my phone, laptop and PC and the game ran very we
 
 I also used lighthouse to test my game and get performance score in SEO, best practices, performance and accessibility. The result of the report showed that my game was optimised well and adhered to all of the right courses taken when developing a scalable project.
 
+![LighthouseBefore]()
+
+I attempted to make my performance score (or any of the other scores) in the lighthouse report better by doing things such as compressing my images using TinyPNG, however this did not increase it. So I accepted that it was very difficult to improve this score and continued to other methods of testing.
+
 ## Validator Testing
 <hr>
 
