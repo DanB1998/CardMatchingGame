@@ -95,7 +95,21 @@ Once both the first and second clicked cards' images have been captured the **ch
 
 If it is a match the **cardsMatch()** function will be triggered, and if not the **nonMatch()** function will be triggered.
 
+## Further feature I'd like to implement
+<hr>
+
+1. Addition of sound to card flips and card images.  
+
+I think this would make the game more enjoyable for its target audience as well as improving it overal. Sound is fun!
+
+2. Ability to add more cards for higher difficulties.
+ 
+For example I think it would be fun to have 16 cards on the hard difficulty! With my current skills I believe it would have been possible to do this however 16 cards would have made responsivity on small devices a lot more difficult. So I left it as something to explore in the future.
+
+The main font style for the game are 'Lobster' and 'Gill sans'. These are the two that I found most fun without being difficult to interpret.
+
 ## Styling and Colours
+<hr>
 
 The main colours used in this game were orange and black. These colours stand out against one another making the game clear and easy to follow, which caters for its audience of younger children as they won't be confused/struggling to follow anything. Also large, neat font is used to be readable and clear, and buttons and interactive parts of the project are large and simple meaning they are not confusing. This reinforces the design to be best accessible to its target audience.
 
