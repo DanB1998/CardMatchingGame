@@ -313,4 +313,6 @@ All images were downloaded on [Shutterstock](https://www.shutterstock.com/) with
 
 * [TinyPNG](https://tinypng.com/) for image compression.
 
+* [FontAwesome](https://fontawesome.com/) for an awesome tractor icon!
+
 
