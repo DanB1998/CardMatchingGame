@@ -73,7 +73,7 @@ card1img = this.querySelector("img").src;
 
 Once both the first and second clicked cards' images have been captured the 'checkCards()' function will compare the cards using an if statement shown below.
 
-![checkCards() function]()
+![checkCards() function](/assets/images/checkcardsfunction.png)
 
 If it is a match the 'cardsMatch()' function will be triggered, and if not the 'nonMatch()' function will be triggered.
 
@@ -82,7 +82,7 @@ If it is a match the 'cardsMatch()' function will be triggered, and if not the '
 The main colours used in this game were orange and black. These colours stand out against one another making the game clear and easy to follow, which caters for its audience of younger children as they won't be confused/struggling to follow anything. Also large, neat font is used to be readable and clear, and buttons and interactive parts of the project are large and simple meaning they are not confusing. This reinforces the design to be best accessible to its target audience.
 
 ## Responsivity
-<br>
+<hr>
 
 It is important that a game like this is playable across all devices, as many kids these days have access to phones, laptops, ipads etc. The main adjustments for the responsivity come in the form of media qeueries for example:
 
@@ -115,18 +115,32 @@ I used these media queries to change font sizes and downscale the size when smal
 
 A larger reason these media queries are helpful is that they allowed me to change the amount of rows and columns of the cards so that on smaller devices there will be less columns. Less columns allowed the cards to be positioned in a narrow viewport so the game is even playable on really thin screens!
 
+![DesktopGame](/assets/images/desktopgame.png) 
 
+![MobileGame](/assets/images/mobilegame.png) 
 
 ## Using Comments
-<br>
+<hr>
 
 The code is littered with comments that prompt what the code is or what it is doing. Any developer or person taking a look at the code will be able to know what they are looking at instantly whether it is a function or an element.
 
 # Testing 
 
-## Trying to be game-breaking
+## Basic testing
+<hr>
 
-The first thing when testing a game, for me anyway, is to see if you can find a way to break it. I came across a couple of scenarios which were more tricky to make robust whilst making this project and they were:
+* I tested the game in chrome, firefox and safari and it ran well in all of them.
+
+* I confirmed the styling and themes used are consistent with the games goals of being simple and easy to play.
+
+* I confirmed that the game runs as expected every test and the game result is always the time running out or 6 matches being made.
+
+* I confirmed that all text is clear and all elements are non intrusive of each other or not too close in styling as to be undistinguishable.
+
+## Trying to be game-breaking and bug solving
+<hr>
+
+The first thing when testing a game, for me anyway, is to see if you can find a way to break it. I came across a couple of scenarios/bugs which were more tricky to make robust whilst making this project and they were:
 
 1. When the user spam clicks multiple cards in a short period of time.
 * This was an issue as the game would flip over multiple cards at once and the flipCard() function which controlled the first and second card logic, would completely collapse.
@@ -141,20 +155,23 @@ The second issue of clicking the same card multiple times was much easier to sol
 After these 2 issues were solved, the game-breaking attempts were still continuing. And after many tries me,  nor any of my helpers could not make the game fail so I would say it is fairly robust. Although I don't doubt there are clever ways to break it, my extensive testing showed me the game is playable nearly 100% of the time with next to no issues. 
 
 ## Responsivity testing
+<hr>
 
 I tested this project thoroughly on all devices using chrome developer tools' 'responsivity' feature. I found no issues and used this to tweak aspects of my media queries to make the game better perform on smaller devices.
 
 I also tried the game myself on my personal phone, laptop and PC and the game ran very well, I have included some screenshots of this testing from these devices below.
 
 ## Lighthouse
+<hr>
 
 I also used lighthouse to test my game and get performance score in SEO, best practices, performance and accessibility. The result of the report showed that my game was optimised well and adhered to all of the right courses taken when developing a scalable project.
 
-![LighthouseBefore]()
+![LighthouseBefore](/assets/images/lighthousebefore.png)
 
 I attempted to make my performance score (or any of the other scores) in the lighthouse report better by doing things such as compressing my images using TinyPNG, however this did not increase it. So I accepted that it was very difficult to improve this score and continued to other methods of testing.
 
 ## Looking for errors
+<hr>
 
 During my testing I was very thorough in searching for errors, whether it being a console error or a game error. No errors are thrown whilst the game is being played and no errors are thrown in response to user actions.
 
@@ -173,49 +190,50 @@ Javascript
 
 *  Lastly there were no errors when running the code through the Javascript validator at https://jshint.com/
 
-## Unfixed bugs?
+## Unfixed bugs
+<hr>
 
 During my long testing process I could not find any bugs. I appreciate that there could be some found and that there are probably some clever ways to cheat/confuse a basic game like this, however I could not find any. 
 
 ## Technologies used
 <hr>
 
-#### HTML5 
+### HTML5 
 <hr>
 
 As the main language for structure.
 
-#### CSS
+### CSS
 <hr>
 
 For styling my html and animating the flipping of the cards.
 
-#### Javascript
+### Javascript
 <hr>
 
 Used for creating the game logic and making the game interactive. Javascript is the main program behind what makes the game interactive and playable.
 
-#### Google Fonts
+### Google Fonts
 <hr>
 
 To select my main font that is fun, matching the theme of the game.
 
-#### Fontawesome
+### Fontawesome
 <hr>
 
 Fontawesome was used for the tractor icons in the header.
 
-#### Git
+### Git
 <hr>
 
 Used for version control to allow me to keep me work safe and up to date.
 
-#### Gitpod
+### Gitpod
 <hr>
 
 Used as a workspace and hosting platform.
 
-#### Github
+### Github
 <hr>
 
 To host and store my project remotely, and also to deploy the website.
@@ -238,5 +256,12 @@ You can also run the repository locally.
 <hr>
 
 All images were downloaded on [Shutterstock](https://www.shutterstock.com/) with a licence.
+
+## Credits
+<hr>
+
+* [Shutterstock](https://www.shutterstock.com/) for images.
+
+* [TinyPNG](https://tinypng.com/) for image compression.
 
 
