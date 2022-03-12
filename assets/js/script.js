@@ -29,7 +29,7 @@ function medium() {
 function hard() {
     runGame();
     startOverlay.classList.remove('show');
-    timeleft = 5;
+    timeleft = 35;
     gameClock();
 }
 

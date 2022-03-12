@@ -11,6 +11,8 @@ Another big aim of mine is to make the development process clean and easy to fol
 
 All code should be a building block for the next developer to add onto!
 
+![Project Mockup](/assets/images/projectmockup.png)
+
 ## User Stories
 <hr>
 
