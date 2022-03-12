@@ -3,20 +3,22 @@
 ## Overview
 <hr>
 
-This project is a card matching game using javascript as the main development language. The game will be fun and easy to play and responsive so it can be played on all devices by anyone.
+This project is a card matching game using javascript as the main development language. The game will be fun, easy to play and responsive so it can be played on all devices by anyone.
 
-The aim of this project is to showcase understanding of many aspects of javascript and at the same time make a fun and interactive game. 
+The aim of this project is to showcase understanding of many aspects of javascript and challenge myself to make a fun, interactive and responsive game. 
 
-I also wish to make the development process clean and easy to follow to allow anyone to take a look at the project and understand the process and the different stages that the project took.
+Another big aim of mine is to make the development process clean and easy to follow to allow anyone to take a look at the project and understand the process and the different stages that the project took. 
+
+All code should be a building block for the next developer to add onto!
 
 ## User Stories
 <hr>
 
-The purpose of this game is to be fun and easy to play, mainly targeting younger audiences however still playable by all ages. It is simple and easy to use requiring only clicks to begin and play the game. The instructions are clear and make the process of playing the game as fluid as possible.
+The purpose of this game is to be fun and easy to play, mainly targeting younger audiences however still playable by all ages. It is simple and easy to use requiring only clicks to begin, play and restart the game. The instructions are clear and make the process of playing the game as fluid as possible.
 
-The game is also designed to be easy to use, which means parents can allow their children to play and not have to worry about repeatedly managing them on the game they are busy. This ease of use does not take away the fun of it being played together, as the pictures and animations are smooth and fun.
+The game is also designed to be **easy to use**, which means parents can allow their children to play and not have to worry about repeatedly managing them on the game if they are busy. However this ease of use does not take away the fun of it being played together, as the pictures and animations are smooth and fun to watch!
 
-As the developer I wanted to make it as fun and as interesting as possible whilst leaving it scalable and easy to navigate. This mean I, or anyone else, can pick it up and make it more complex or improve it at any point without having to dive into spaghetti code.
+As the developer I wanted to make it as captivating and as re-playable as possible whilst leaving it scalable and easy to navigate. This means I, or anyone else, can pick it up and make it more complex or improve it at any point without having to dive into a heap of spaghetti code.
 
 # Features
 
@@ -51,7 +53,7 @@ This overlay will appear when the player runs out of time. This will pop up and 
 
 There are 12 cards and they are each positioned inside the game container. Each card is a percentage width and height of the game container (minus the margin), which allows the cards to resize themselves inside the game container based on which device the game is being played on. The cards will flip when clicked as the Javascript will give them a class called 'flip'. Once this class is handed to the card the CSS will flip the card and the card and its image will also be stored for use in the javascript logic later on.
 
-When adding and removing event listners from all the cards at once I used an iteration. As an example:
+When adding and removing event listeners from all the cards at once I used an iteration. As an example:
 
 ```
 for (let i = 0; i < cards.length; i++) {
@@ -98,7 +100,7 @@ The main colours used in this game were orange and black. These colours stand ou
 ## Responsivity
 <hr>
 
-It is important that a game like this is playable across all devices, as many kids these days have access to phones, laptops, ipads etc. The main adjustments for the responsivity come in the form of media queries for example:
+It is important that a game like this is playable across all devices, as many people, especially kids, have access to phones, laptops, ipads etc. The main adjustments for the responsivity come in the form of media queries for example:
 
 ```
 @media only screen and (max-width: 775px){
@@ -136,7 +138,7 @@ A larger reason these media queries are helpful is that they allowed me to chang
 ## Using Comments
 <hr>
 
-The code is littered with comments that prompt what the code is or what it is doing. Any developer or person taking a look at the code will be able to know what they are looking at instantly whether it is a function or an element.
+The code is littered with comments and docstrings that prompt what the code is or what it is doing. Any developer or person taking a look at the code will be able to know what they are looking at instantly, whether it is a function or an element. I used comments to help keep my developer goal of making the game scalable and simple to pick up realistic.
 
 # Testing 
 
@@ -150,6 +152,8 @@ The code is littered with comments that prompt what the code is or what it is do
 * I confirmed that the game runs as expected every test and the game result is always the time running out or 6 matches being made.
 
 * I confirmed that all text is clear and all elements are non intrusive of each other or not too close in styling as to be undistinguishable.
+
+I also tested my user stories against the design and implementation of the game and found all aspects of the game to be appropriate to all of the purposes of the game being built.
 
 ## Trying to be game-breaking and bug solving
 <hr>

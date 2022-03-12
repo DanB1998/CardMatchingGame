@@ -261,3 +261,43 @@ body {
     }
 
 }
+
+@media only screen and (max-width: 450px){
+    
+    .heading {
+        font-size: 9px;
+    }
+
+    .time-container {
+        font-size: 14px;
+    }
+    
+    .match-container {
+        font-size: 14px;
+    }
+
+    .fa-tractor {
+        font-size: 15px;
+    }
+
+    .game-container {
+        margin: 20px;
+        padding: 10px;
+    }
+
+    .overlay {
+        font-size: 30px;
+    }
+
+    .overlay .desc {
+        font-size: 12px;
+    }
+
+    .overlay button {
+        font-size: 15px;
+        width: 125px;
+        height: 35px;
+        margin: 15px;
+    }
+
+}
