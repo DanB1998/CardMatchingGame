@@ -47,13 +47,35 @@ There are 12 cards and they are each positioned inside the game container. Each 
 ### Matches and Timer (including difficulty)
 <hr>
 
+The matches and the timer are displayed just above the game container. They track the amount of matches the user has currently made and also the amount of time left in the game before the player loses.
+
+The difficulty is chosen on the start overlay. The buttons 'Easy', 'Medium' and 'Hard' will set the 'timeleft' variable to a value, and the countdown of the time will begin.
+
 ### Matching logic
 <hr>
 
-## Technologies used
-<hr>
+The matching logic works by comparing the image src of both cards that are flipped with the even listener. This piece of code captures the clicked cards image using 'this' and stores the images src to be compared to the second clicked card.
+
+"card1img = this.querySelector("img").src;"
+
+Once both the first and second clicked cards' images have been captured the 'checkCards()' function will compare the cards using an if statement shown below.
+
+![checkCards() function]()
+
+If it is a match the 'cardsMatch()' function will be triggered, and if not the 'nonMatch()' function will be triggered.
+
 
 # Testing 
+
+### Responsivity testing
+
+I tested this project thoroughly on all devices using chrome developer tools' 'responsivity' feature. I found no issues and used this to tweak aspects of my media queries to make the game better perform on smaller devices.
+
+I also tried the game myself on my phone, laptop and PC and the game ran very well, I have included some screenshots of this testing below.
+
+### Lighthouse
+
+I also used lighthouse to test my game and get performance score in SEO, best practices, performance and accessibility. The result of the report showed that my game was optimised well and adhered to all of the right courses taken when developing a scalable project.
 
 ## Validator Testing
 <hr>
@@ -69,6 +91,9 @@ CSS
 Javascript
 
 *  Lastly there were no errors when running the code through the Javascript validator at https://beautifytools.com/javascript-validator.php
+
+## Technologies used
+<hr>
 
 #### HTML5 
 <hr>
