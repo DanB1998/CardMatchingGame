@@ -21,6 +21,9 @@ As the developer I wanted to make it as fun and as interesting as possible whils
 # Features
 
 ## Overlays:
+<hr>
+
+All of the overlays pop up and disappear depending on whether they have the 'show' class or not. To give or take this class from the overlays the javascript uses the **remove()** or **add()** methods. This is similar to how the cards are flipped which will be detailed further later on.
 
 ## Starting Overlay
 <hr>
@@ -34,33 +37,44 @@ The starting overlay is what the user will land on after entering the game. This
 
 ![Win Overlay](/assets/images/winoverlay.png)
 
-The winner overlay will display when the user wins the game (matching 6 pairs of cards). This will pop up and allow the user to easily restart the game. This will return them to the landing overlay so they can choose a new difficulty, or allow them to restart on the same difficulty as they just played, skipping the need for the starting overlay to reappear.
+The winner overlay will display when the user wins the game (matching 6 pairs of cards). This will pop up and allow the user to easily restart the game. This will return them to the start overlay so they can choose a new difficulty.
 
 ## Loser Overlay
 <hr>
 
 ![Lose Overlay](/assets/images/loseoverlay.png)
 
-This overlay will appear when the player runs out of time. This will pop up and, similarly to the winner overlay, allow the user to 'try again' on the same difficulty or restart and choose a new difficulty (prompting the starting overlay to appear again). 
+This overlay will appear when the player runs out of time. This will pop up and allow the user to 'Play Again'. This will trigger a restart and the user can choose a new difficulty. 
 
 ## The Cards
 <hr>
 
 There are 12 cards and they are each positioned inside the game container. Each card is a percentage width and height of the game container (minus the margin), which allows the cards to resize themselves inside the game container based on which device the game is being played on. The cards will flip when clicked as the Javascript will give them a class called 'flip'. Once this class is handed to the card the CSS will flip the card and the card and its image will also be stored for use in the javascript logic later on.
 
+When adding and removing event listners from all the cards at once I used an iteration. As an example:
+
+```
+for (let i = 0; i < cards.length; i++) {
+        cards[i].addEventListener("click", flipCard)
+    }
+```
+This was the way I found best to unflip all the cards at the restart of the game.
+
 ## Matches and Timer (including difficulty)
 <hr>
 
+![Time and match](/assets/images/timeandmatch.png)
+
 The matches and the timer are displayed just above the game container. They track the amount of matches the user has currently made and also the amount of time left in the game before the player loses.
 
-The difficulty is chosen on the start overlay. The buttons 'Easy', 'Medium' and 'Hard' will set the 'timeleft' variable to a value, and the countdown of the time will begin.
+The difficulty is chosen on the start overlay. The buttons 'Easy', 'Medium' and 'Hard' have onclick events that will set the 'timeleft' variable to a value, and the countdown of the time will begin.
 
 ```
 if (timeleft < 0) {
             youLose();
         }
 ```
-This piece of javascript recognises when the timer has reached 0, and is what will call the 'youLose()' function when the time has run out.
+This piece of javascript recognises when the timer has reached 0, and is what will call the **youLose()** function when the time has run out.
 
 ## Matching logic
 <hr>
@@ -71,11 +85,11 @@ The matching logic works by comparing the image src of both cards that are flipp
 card1img = this.querySelector("img").src;
 ```
 
-Once both the first and second clicked cards' images have been captured the 'checkCards()' function will compare the cards using an if statement shown below.
+Once both the first and second clicked cards' images have been captured the **checkCards()** function will compare the cards using an if statement shown below.
 
 ![checkCards() function](/assets/images/checkcardsfunction.png)
 
-If it is a match the 'cardsMatch()' function will be triggered, and if not the 'nonMatch()' function will be triggered.
+If it is a match the **cardsMatch()** function will be triggered, and if not the **nonMatch()** function will be triggered.
 
 ## Styling and Colours
 
@@ -84,7 +98,7 @@ The main colours used in this game were orange and black. These colours stand ou
 ## Responsivity
 <hr>
 
-It is important that a game like this is playable across all devices, as many kids these days have access to phones, laptops, ipads etc. The main adjustments for the responsivity come in the form of media qeueries for example:
+It is important that a game like this is playable across all devices, as many kids these days have access to phones, laptops, ipads etc. The main adjustments for the responsivity come in the form of media queries for example:
 
 ```
 @media only screen and (max-width: 775px){
@@ -111,7 +125,7 @@ It is important that a game like this is playable across all devices, as many ki
 
 }
 ```
-I used these media queries to change font sizes and downscale the size when smaller devices are used.
+I used these media queries to change font sizes and downscale the size when smaller 'max-width' devices are used.
 
 A larger reason these media queries are helpful is that they allowed me to change the amount of rows and columns of the cards so that on smaller devices there will be less columns. Less columns allowed the cards to be positioned in a narrow viewport so the game is even playable on really thin screens!
 
@@ -148,6 +162,9 @@ The first thing when testing a game, for me anyway, is to see if you can find a 
 2. When a user spam clicks the same card multiple times.
 * This was an issue as the card would recognise itself as the same card as was clicked first, so it would match itself and trigger the game to think the user had matched 2 cards.
 
+## Solving the bugs
+<hr>
+
 I found that the best way to solve the 'spam clicking multiple cards in a short period of time' was to introduce a new variable 'gameBusy'. If 'gameBusy' was true it would break out the flipCard function, meaning the spam clicks would just be ignored by the flipCard() function. gameBusy would then be set back to false after the game had finished checking if the second card was a match or a non-match with the help also from the setInterval() function, which gave the cards 500ms of time to flip back over before setting gameBusy to false again. After attempting to spam click many times (and even giving this program to family members and asking them to try and break it!), I was unable to get this issue to arise again.
 
 The second issue of clicking the same card multiple times was much easier to solve. Whilst this issue was in my game the flipCard() function was toggling the classlist 'flip', meaning every card that was clicked would have flip added or removed depending on if it had it or not. I changed this from 'toggle' to 'add' and told the flipCard() function to break out if card 1 was the same as card 2, meaning that it was not possible to click the same card twice and the game to break.
@@ -159,7 +176,9 @@ After these 2 issues were solved, the game-breaking attempts were still continui
 
 I tested this project thoroughly on all devices using chrome developer tools' 'responsivity' feature. I found no issues and used this to tweak aspects of my media queries to make the game better perform on smaller devices.
 
-I also tried the game myself on my personal phone, laptop and PC and the game ran very well, I have included some screenshots of this testing from these devices below.
+I also tried the game myself on my personal phone, laptop and PC and the game ran very well, I have included some screenshot of this testing from my mobile below.
+
+![Mobile Testing](/assets/images/mymobile.png) ![Mobile Testing](/assets/images/mobilegameover.png)
 
 ## Lighthouse
 <hr>
@@ -189,6 +208,16 @@ CSS
 Javascript
 
 *  Lastly there were no errors when running the code through the Javascript validator at https://jshint.com/
+
+The output of JSHint was:
+
+1. There are 16 functions in this file.
+
+2. Function with the largest signature take 0 arguments, while the median is 0.
+
+3. Largest function has 11 statements in it, while the median is 4.
+
+4. The most complex function has a cyclomatic complexity value of 4 while the median is 1.
 
 ## Unfixed bugs
 <hr>
